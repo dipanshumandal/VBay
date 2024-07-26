@@ -5,6 +5,7 @@ import Signup from "./pages/Signup";
 import SellerDashboard from "./pages/SellerDashboard";
 import BuyerDashboard from "./pages/BuyerDashboard";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path='/seller/profile' element={<SellerDashboard/>}/>
         <Route path='/buyer/profile' element={<BuyerDashboard/>}/>
     </Routes>
+    <Footer/>
     </BrowserRouter>
     </>
   )
