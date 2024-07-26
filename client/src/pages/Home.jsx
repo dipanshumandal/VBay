@@ -1,11 +1,13 @@
 import React from 'react'
 import HeroSection from "../components/Herosection";
-const home = () => {
+import ProductGallery from '../components/ProductGallery';
+const Home = () => {
   return (
     <div className='mt-36'>
     <HeroSection />
+    <ProductGallery/>
     </div>
   )
 }
 
-export default home
+export default Home
