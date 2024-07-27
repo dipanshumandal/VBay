@@ -6,6 +6,7 @@ const dotenv=require("dotenv")
 const { connectDb } = require("./connection");
 const {readdirSync} =require("fs");
 const { connect } = require("http2");
+const cors=require("cors")
 
 //import the route
 //const authRoute=require("./routes/authRoutes")
@@ -21,6 +22,8 @@ const port=process.env.PORT || 3000;
 
 connectDb()
 
+app.use(cors())
+app.use(express.json())
 //Making Routes
 app.get("/",(req,res)=>{
     res.send("Server Running...")
