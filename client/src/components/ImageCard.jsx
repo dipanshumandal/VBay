@@ -10,7 +10,7 @@ const ImageCard = ({id, img, title, price, author, icon1, icon2}) => {
                 <div className="flex justify-between items-center mt-2">
                   <div>
                       <h3 className="text-lg font-semibold ">{title}</h3>
-                      <p className="text-gray-500 ">Price :₹+{price}</p>
+                      <p className="text-gray-500 ">Price :₹{price}</p>
                   </div>
                   <div className="flex gap-5 justify-center items-center">
                   {icon1}
