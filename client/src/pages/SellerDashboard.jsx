@@ -1,8 +1,14 @@
 import React from 'react'
+import DashboardSidebar from "../components/DashboardSidebar"
 
 const SellerDashboard = () => {
   return (
-    <div>SellerDashboard</div>
+    <div>
+      <DashboardSidebar/>
+      <div>
+        
+      </div>
+    </div>
   )
 }
 
