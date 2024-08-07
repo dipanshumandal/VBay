@@ -23,7 +23,7 @@ const DashboardSidebar = () => {
         !sidebar == true
           ? "-translate-x-[500px] sm:translate-x-0"
           : "translate-x-0"
-      } flex text-lg font-semibold bg-white shadow-lg flex-col gap-2 w-fit min-h-screen p-3 list-none justify-between items-center`}
+      } ease-in-out duration-300 flex sm:static text-lg font-semibold bg-white shadow-lg flex-col gap-2 w-fit min-h-full p-3 list-none justify-between items-center`}
     >
       <div>
         {/* Circle with my names first letter */}
@@ -36,20 +36,20 @@ const DashboardSidebar = () => {
           {pathname === "/seller/profile" ? (
             <li
               className={`w-full rounded-lg px-2 hover:bg-black hover:text-white cursor-pointer transition-all ease-linear duration-300 hover:scale-105 flex gap-2 justify-start items-center ${
-                tab === "product-management" && "bg-black text-white"
+                tab === "photos-management" && "bg-black text-white"
               }`}
-              onClick={() => dispatch(setTab("product-management"))}
+              onClick={() => dispatch(setTab("photos-management"))}
             >
-              <IoMdPhotos /> Manage Products
+              <IoMdPhotos /> Photos Management
             </li>
           ) : (
             <li
               className={`w-full rounded-lg px-2 hover:bg-black hover:text-white cursor-pointer transition-all ease-linear duration-300 hover:scale-105 flex gap-2 justify-start items-center ${
-                tab === "product-purchased" && "bg-black text-white"
+                tab === "photos-purchased" && "bg-black text-white"
               }`}
-              onClick={() => dispatch(setTab("product-purchased"))}
+              onClick={() => dispatch(setTab("photos-purchased"))}
             >
-              <IoMdPhotos /> Products Purchased
+              <IoMdPhotos /> Photos Purchased
             </li>
           )}
 
@@ -88,7 +88,10 @@ const DashboardSidebar = () => {
       </div>
 
       {/* logout button */}
-      <li className="w-full rounded-lg px-2 hover:bg-black hover:text-white cursor-pointer transition-all ease-linear duration-300 hover:scale-105 flex gap-2 justify-start items-center" onClick={() => dispatch(logout())}>
+      <li
+        className="w-full rounded-lg px-2 hover:bg-black hover:text-white cursor-pointer transition-all ease-linear duration-300 hover:scale-105 flex gap-2 justify-start items-center"
+        onClick={() => dispatch(logout())}
+      >
         <IoLogOut /> Logout
       </li>
     </nav>
