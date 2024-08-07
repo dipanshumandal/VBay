@@ -1,4 +1,13 @@
-const express = require("express")
-const router=express.Router()
+const router = require("express").Router();
+const { verifyToken } = require("../middlewares/verifyToken");
+const {
+  createPost,
+  getMyPosts,
+  getAllPosts,
+} = require("../controllers/postController");
 
-module.exports=router;
+router.post("/post/create", verifyToken, createPost);
+router.get("/post/getAll", getAllPosts);
+router.get("/post/myPosts", verifyToken, getMyPosts);
+
+module.exports = router;
