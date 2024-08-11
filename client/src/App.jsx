@@ -12,7 +12,7 @@ export default function App() {
       <BrowserRouter>
         <Navbar/>
         <GsapTransitions/>
-        <Footer/>
+        {/* <Footer/> */}
       </BrowserRouter>
     </Provider>
     </>
